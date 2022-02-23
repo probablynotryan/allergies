@@ -17,13 +17,13 @@ namespace Allergies.Test
     public void AllergenCheck_CheckIfAllergicToPeanutsAndEggs_PeanutsAndEggs()
     {
       Assert.AreEqual("Peanuts", Allergens.AllergenCheck(2));
-      Assert.AreEqual("Peanuts and Eggs", Allergens.AllergenCheck(3));
+      Assert.AreEqual("Eggs and Peanuts", Allergens.AllergenCheck(3));
     }
 
     [TestMethod]
     public void AllergenCheck_CheckIfAllergicToTheRest_AllTheStuff()
     {
-      Assert.AreEqual("Cats and Pollen and Chocolate and Tomatoes and Strawberries and Shellfish and Peanuts and Eggs", Allergens.AllergenCheck(255));
+      Assert.AreEqual("Eggs and Peanuts and Shellfish and Strawberries and Tomatoes and Chocolate and Pollen and Cats", Allergens.AllergenCheck(255));
     }
   }
 }
